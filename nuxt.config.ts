@@ -3,8 +3,8 @@ export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
   ssr: false,
-  target:static,
-  router:{ base: '/Template-NuxtQuasarTailwindPiniaApp/' },
+  target: "static",
+  router: { base: "/Template-NuxtQuasarTailwindPiniaApp/" },
   app: {
     head: {
       titleTemplate: "%s | My App", // %s is replaced with the page title
