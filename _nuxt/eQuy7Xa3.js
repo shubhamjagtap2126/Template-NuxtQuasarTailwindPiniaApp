@@ -1,0 +1,1 @@
+import{u as o}from"./WV85JIxD.js";import{t as s,v as a,x as e,F as r}from"./BI7m3-f3.js";const p={__name:"contact",setup(l){return o({title:"Home"}),(n,t)=>(a(),s(r,null,[t[0]||(t[0]=e("div",{class:"text-2xl font-bold"},"Contact Us",-1)),t[1]||(t[1]=e("p",null,"Feel free to reach out to us.",-1))],64))}};export{p as default};

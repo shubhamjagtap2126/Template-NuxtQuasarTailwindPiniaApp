@@ -1,0 +1,1 @@
+import{u as s}from"./WV85JIxD.js";import{t as o,v as a,x as e}from"./BI7m3-f3.js";const r={class:"p-4"},n={__name:"about",setup(l){return s({title:"About"}),(p,t)=>(a(),o("div",r,t[0]||(t[0]=[e("h1",{class:"text-2xl font-bold"},"About Page",-1),e("p",{class:"mt-2"},"This is the about page.",-1)])))}};export{n as default};
