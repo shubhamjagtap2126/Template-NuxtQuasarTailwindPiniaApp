@@ -1,27 +1,31 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   // '@nuxt/eslint',
-  modules: ['@nuxtjs/tailwindcss', 'nuxt-quasar-ui', '@pinia/nuxt', 'pinia-plugin-persistedstate', '@nuxt/fonts', '@nuxt/icon', '@nuxt/image', '@nuxt/scripts'],
+  modules: ['@nuxtjs/tailwindcss', 'nuxt-quasar-ui', '@pinia/nuxt', 'pinia-plugin-persistedstate', '@nuxt/fonts', '@nuxt/icon', '@nuxt/image', '@nuxt/scripts', '@vite-pwa/nuxt'],
   imports: {
     dirs: ['./client/plugins/**', './client/composables/**'],
   },
   devtools: { enabled: true },
+  devServer: { port: 3100 },
   app: {
     head: {
       titleTemplate: '%s | AppName',
       meta: [],
+      link: [
+        { rel: 'manifest', href: 'manifest.json' },
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      ],
       // script: [{ src: 'https://www.googletagmanager.com/ns.html?id=GTM-WFHNVRQP' }],
       // link: [{ rel: 'manifest', href: 'manifest.json' }],
       viewport: 'width=device-width, initial-scale=1 maximum-scale=1, user-scalable=no',
     },
   },
-  css: ['./assets/main.css', 'quasar/animations', 'quasar/icons'],
+  css: ['./client/assets/main.css', 'quasar/animations', 'quasar/icons'],
   runtimeConfig: {
     public: { SECURELS_SECRET: process.env.SECURELS_SECRET },
     server: { SCRIPT_PROD_URL: process.env.SCRIPT_PROD_URL },
   },
   srcDir: 'client/',
-  future: { compatibilityVersion: 4.0 },
   compatibilityDate: '2025-05-15',
   nitro: {
     preset: 'netlify', // Use 'node-server'' for Node.js server, 'netlify' for Netlify functions, or 'vercel' for Vercel serverless functions
@@ -73,6 +77,14 @@ export default defineNuxtConfig({
           fontFamily: {},
         },
       },
+    },
+  },
+  pwa: {
+    workbox: {
+      globPatterns: ['**/*.{js,css,html,png,svg,ico}'],
+    },
+    client: {
+      installPrompt: true, // ENSURE THIS IS TRUE!
     },
   },
 });

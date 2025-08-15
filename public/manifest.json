@@ -1,0 +1,26 @@
+{
+  "name": "AppName",
+  "short_name": "AppName",
+  "description": "Test Description",
+  "categories": ["service", "webapp", "event"],
+  "start_url": "/user",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#253D98",
+  "theme_color": "#fff",
+  "id": "/",
+  "lang": "en",
+  "shortcuts": [
+    { "name": "Home", "url": "/" },
+    { "name": "User Home", "url": "/user" }
+  ],
+  "icons": [
+    // { "src": "192x192.png", "sizes": "96x96", "type": "image/png" },
+    { "src": "192x192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "512x512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "screenshots": [
+    { "src": "screenshot1.png", "sizes": "540x720", "type": "image/png" },
+    { "src": "screenshot2.png", "sizes": "540x720", "type": "image/png" }
+  ]
+}
